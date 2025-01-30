@@ -10,7 +10,18 @@ using (HttpClient client = new HttpClient())
         var musicas = JsonSerializer.Deserialize<List<Musica>>(resposta)!;
         //musicas[1696].ExibirDetalhesDaMusica();
         //LinqFilter.FiltrarTodosOsGenerosMusicais(musicas);
-        LinqOrder.ExibirListaDeArtistasOrdenados(musicas);
+        //LinqOrder.ExibirListaDeArtistasOrdenados(musicas);
+        //LinqFilter.FiltrarArtistasPorGeneroMusical(musicas, "hip hop");
+        //LinqFilter.FiltrarMusicasDeUmArtista(musicas, "Kanye West");
+
+        var musicasPreferidasDoDaniel = new MusicasPreferidas("Gabriel");
+        musicasPreferidasDoDaniel.AdicionarMusicasFavoritas(musicas[1696]);
+        musicasPreferidasDoDaniel.AdicionarMusicasFavoritas(musicas[1696]);
+        musicasPreferidasDoDaniel.AdicionarMusicasFavoritas(musicas[1696]);
+        musicasPreferidasDoDaniel.AdicionarMusicasFavoritas(musicas[1696]);
+        musicasPreferidasDoDaniel.AdicionarMusicasFavoritas(musicas[1696]);
+
+
 
     }
     catch (Exception ex)

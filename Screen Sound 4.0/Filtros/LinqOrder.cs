@@ -1,4 +1,5 @@
-﻿using Screen_Sound_4._0.Modelos;
+﻿using System.Text.RegularExpressions;
+using Screen_Sound_4._0.Modelos;
 
 namespace Screen_Sound_4._0.Filtros;
 
@@ -13,4 +14,6 @@ internal class LinqOrder
             Console.WriteLine($"-{artista}-");
         }
     }
+
+    
 }
