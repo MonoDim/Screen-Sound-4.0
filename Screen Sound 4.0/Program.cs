@@ -12,15 +12,16 @@ using (HttpClient client = new HttpClient())
         //LinqFilter.FiltrarTodosOsGenerosMusicais(musicas);
         //LinqOrder.ExibirListaDeArtistasOrdenados(musicas);
         //LinqFilter.FiltrarArtistasPorGeneroMusical(musicas, "hip hop");
-        //LinqFilter.FiltrarMusicasDeUmArtista(musicas, "Kanye West");
+        //LinqFilter.FiltrarMusicasDeUmArtista(musicas, "Childish Gambino");
 
-        var musicasPreferidasDoDaniel = new MusicasPreferidas("Gabriel");
-        musicasPreferidasDoDaniel.AdicionarMusicasFavoritas(musicas[1696]);
-        musicasPreferidasDoDaniel.AdicionarMusicasFavoritas(musicas[1696]);
-        musicasPreferidasDoDaniel.AdicionarMusicasFavoritas(musicas[1696]);
-        musicasPreferidasDoDaniel.AdicionarMusicasFavoritas(musicas[1696]);
-        musicasPreferidasDoDaniel.AdicionarMusicasFavoritas(musicas[1696]);
+        var musicasPreferidasDoGabriel = new MusicasPreferidas("Gabriel");
+        musicasPreferidasDoGabriel.AdicionarMusicasFavoritas(musicas[10]);
+        musicasPreferidasDoGabriel.AdicionarMusicasFavoritas(musicas[20]);
+        musicasPreferidasDoGabriel.AdicionarMusicasFavoritas(musicas[30]);
+        musicasPreferidasDoGabriel.AdicionarMusicasFavoritas(musicas[40]);
+        musicasPreferidasDoGabriel.ExibirMusicasFavoritas();
 
+        musicasPreferidasDoGabriel.GerarArquivoJson();
 
 
     }
