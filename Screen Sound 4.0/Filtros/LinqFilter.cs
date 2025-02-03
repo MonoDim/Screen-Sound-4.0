@@ -5,7 +5,7 @@ namespace Screen_Sound_4._0.Filtros;
 
 internal class LinqFilter
 {
-    public static void FiltrarTodosOsGenerosMusicais(List<Musica>musicas)
+    public static void FiltrarTodosOsGenerosMusicais(List<Musica> musicas)
     {
         var todosOsGenerosMusicais = musicas.Select(generos => generos.Genero).Distinct().ToList();
         foreach (var genero in todosOsGenerosMusicais)
@@ -32,5 +32,26 @@ internal class LinqFilter
         {
             Console.WriteLine($"-{musica.Nome}-");
         }
+    }
+
+    public static void FiltrarMusicasPorTom(List<Musica> musicas, string tom)
+    {
+        var musicasPorTom = musicas.Where(musica => musica.Tom.Equals(tom)).ToList();
+        Console.WriteLine($"Ta ai as musicas no tom q vc pediu pra eu mostra\r");
+        foreach (var musica in musicasPorTom)
+        {
+            Console.WriteLine($"-{musica.Nome}-");
+        }
+    }
+
+    public static string ConverterNumeroParaTom(int? Numero)
+    {
+        var tom = new Dictionary<int, string>
+    {
+        {0, "C"}, {1, "C#"}, {2, "D"}, {3, "D#"}, {4, "E"}, {5, "F"},
+        {6, "F#"}, {7, "G"}, {8, "G#"}, {9, "A"}, {10, "A#"}, {11, "B"}
+    };
+
+        return tom[Numero.Value];
     }
 }
